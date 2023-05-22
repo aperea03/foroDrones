@@ -1,1 +1,4 @@
-import './bootstrap';
+// import './bootstrap';
+window.addEventListener('load', function() {
+    alert("hola");
+});
