@@ -1,0 +1,22 @@
+// Breakpoints
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 1200px;
+
+@mixin small {
+  @media (max-width: $breakpoint-small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: $breakpoint-medium) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (max-width: $breakpoint-large) {
+    @content;
+  }
+}
