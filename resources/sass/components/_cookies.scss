@@ -1,0 +1,20 @@
+// Estilos cookies
+.cookie-notice {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: $suave;
+    text-align: center;
+    z-index: 9999;
+  }
+  
+  .accept-cookies-btn {
+    padding: 10px 20px;
+    background-color: $gris;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }

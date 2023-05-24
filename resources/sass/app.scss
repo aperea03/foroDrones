@@ -11,6 +11,9 @@
 // Mixins
 @import 'mixin';
 
+// Componentes web
+@import 'components/cookies';
+
 body{
     background-color: $body-bg;
     font-family: $font1;
@@ -62,6 +65,7 @@ body{
         text-align: center;
         @include medium {
             width: 100%;
+            margin-bottom: 1rem;
         }
         img{
             width: 10%;
