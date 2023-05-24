@@ -95,10 +95,8 @@
         </div>
     </nav>    
 
-    
-    <div class="container">
-        @yield('content')
-    </div>
+    @yield('content')
+
     
 {{-- FOOTER --}}
 <!-- Aviso de cookies -->
