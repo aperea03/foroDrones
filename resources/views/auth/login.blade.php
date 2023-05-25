@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="row justify-content-center mt-5">
+<div class="row justify-content-center mt-5 pt-5 login-p">
     <div class="col-md-8">
 
         <div class="card">
@@ -37,5 +37,41 @@
         </div>
     </div>    
 </div>
-    
+{{-- footer --}}
+<footer class="border-top pt-5 mt-5">
+    <div class="container-xl">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h3 class="mb-4">Categorías</h3>
+                <nav class="d-flex flex-column">
+                    <a class="text-decoration-none text-dark" href="#">Shishas</a>
+                    <a class="text-decoration-none text-dark" href="#">Pods</a>
+                    <a class="text-decoration-none text-dark" href="#">Accesorios</a>
+                    <a class="text-decoration-none text-dark" href="#">Encendido</a>
+                    <a class="text-decoration-none text-dark" href="#">Cazoletas</a>
+                </nav>
+            </div>
+
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h3 class="mb-4">Información</h3>
+                <nav class="d-flex flex-column">
+                    <a class="text-decoration-none text-dark" href="#">¿Quienes somos?</a>
+                    <a class="text-decoration-none text-dark" href="#">Ubicanos</a>
+                    <a class="text-decoration-none text-dark" href="#">forodrones123@gmail.com</a>
+                    <a class="text-decoration-none text-dark" href="#">664 34 56 33</a>
+                </nav>
+            </div>
+
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h3 class="mb-4">Siguenos</h3>
+                <nav class="d-flex flex-column">
+                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-facebook"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-instagram"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitter"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitch"></i></a></h3>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
 @endsection

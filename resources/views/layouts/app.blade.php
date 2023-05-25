@@ -47,7 +47,7 @@
     </div>
 
     {{-- Barra de navegacións --}}
-    <nav class="navbar navbar-expand-md navbar-custom">
+    <nav class="navbar navbar-expand-md navbar-custom sticky-top shadow">
         <div class="container">
           <a class="navbar-brand" href="{{ URL('/') }}">Inicio</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,14 +55,14 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Foros</a>
+                <li class="nav-item ml-2 mr-2">
+                    <a class="nav-link" href="#">Foro</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Mi Cuenta</a>
+                <li class="nav-item ml-2 mr-2">
+                    <a class="nav-link" href="#">Sobre nosotros</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Cerrar Sesión</a>
+                <li class="nav-item ml-2 mr-2">
+                  <a class="nav-link" href="#">+ POST</a>
                 </li>
               </ul>
             <ul class="navbar-nav ms-auto">
@@ -76,7 +76,7 @@
                 @else    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-person"></i>&nbsp;&nbsp;{{ Auth::user()->name }}
+                            <strong><i class="bi bi-person-circle"></i>&nbsp;&nbsp;{{ Auth::user()->name }}</strong>
                         </a>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="{{ route('logout') }}"
@@ -97,8 +97,11 @@
 
     @yield('content')
 
-    
-{{-- FOOTER --}}
+<div class="text-white footer-lg">
+    <p class="text-center p-2 m-0">
+      &copy; 2023 ForoDrones. Todos los derechos reservados.
+    </p>
+  </div>
 <!-- Aviso de cookies -->
 <div id="cookie-notice" class="cookie-notice">
     <p>Utilizamos cookies para mejorar tu experiencia en este sitio web. Al continuar navegando, aceptas el uso de cookies.</p>
