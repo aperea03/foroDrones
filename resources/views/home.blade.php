@@ -21,22 +21,26 @@
                   <div class="carousel-item active">
                     <img src="{{URL::asset('images/carousel/carousel1.jpg')}}" alt="Imagen 1">
                     <div class="carousel-caption">
-                      <h3>Título de la imagen 1</h3>
-                      <p>Descripción de la imagen 1</p>
+                      <h2>Mollerussa Drone Party 2023</h2>
+                      <p>20-21-22 Junio</p>
+                      <p>Participa en nuestro evento anual en el que se realizarán carreras y competiciones contrareloj  ¿A que esperas?.
+                      </p>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="{{URL::asset('images/carousel/carousel2.jpg')}}" alt="Imagen 2">
                     <div class="carousel-caption">
-                      <h3>Título de la imagen 2</h3>
-                      <p>Descripción de la imagen 2</p>
+                      <h2>Quedada DDC Valencia</h2>
+                      <p>4-5 Agosto</p>
+                      <p>Asiste a nuestras carreras en las nuevas instalaciones al aire libre ¡No olvides tu drone! </p>
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="{{URL::asset('images/carousel/carousel3.jpg')}}" alt="Imagen 3">
                     <div class="carousel-caption">
-                      <h3>Título de la imagen 3</h3>
-                      <p>Descripción de la imagen 3</p>
+                      <h2>Convocatoria nuevos pilotos DRL</h2>
+                      <p>12-13 Julio</p>
+                      <p>Vente con nosotros y compite para ser el mejor piloto de la Drone Racing Leage.</p>
                     </div>
                   </div>
                 </div>
@@ -49,7 +53,36 @@
                   <span class="visually-hidden">Siguiente</span>
                 </a>
               </div>
-              <h1 class="titulo_1 text-center fw-bold mt-2">INFORMACIÓN BÁSICA</h1>
+              <h1 class="titulo_1 text-center fw-bold mt-2 mb-2">EVENTOS RELACIONADOS</h1>
+
+              <div class="row event1">
+                <div class="col-lg-8">
+                  <h3>TOMATE AIR MEETING 2023</h3>
+                  <h5></h5>
+                </div>
+                <div class="col-lg-4">
+                  <img src="{{URL::asset('images/eventos/event1.jpeg')}}" alt="" class="img-fluid">
+                </div>
+              </div>
+              <div class="row event2">
+                <div class="col-lg-4">
+                  <img src="{{URL::asset('images/eventos/event2.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-8">
+                  <h3>DRONE EXPO MADRID 2023</h3>
+                  <h5></h5>
+                </div>
+              </div>
+              <div class="row event3">
+                <div class="col-lg-8">
+                  <h3>AGUACATE MODEL AIRSHOW</h3>
+                  <h5></h5>
+                </div>
+                <div class="col-lg-4">
+                  <img src="{{URL::asset('images/eventos/event3.jpg')}}" alt="" class="img-fluid">
+                </div>
+              </div>
+              <h1 class="titulo_1 text-center fw-bold mt-2 mb-2">ÚNETE A NUESTRO FORO</h1>
         </div>    
     </div>
 </div>
