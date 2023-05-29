@@ -25,3 +25,9 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/dashboard', 'dashboard')->name('dashboard');
     Route::post('/logout', 'logout')->name('logout');
 });
+// Rutas de post y comentarios
+Route::get('/', 'PostController@index')->name('home');
+Route::get('/posts/create', 'PostController@create')->name('posts.create');
+Route::post('/posts', 'PostController@store')->name('posts.store');
+Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
+Route::post('/posts/{post}/comments', 'CommentController@store')->name('comments.store');
