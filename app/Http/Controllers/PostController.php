@@ -3,18 +3,76 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function store(Request $request, Post $post)
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
     {
-        $comment = new Comment();
-        $comment->content = $request->input('content');
-        $comment->post_id = $post->id;
-        $comment->save();
+        $posts = Post::latest()->get();
 
-        return redirect()->route('posts.show', $post);
+        return view('posts.index', compact('posts'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('posts.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+        ]);
+
+        $post = Post::create([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'user_id' => auth()->id(),
+        ]);
+
+        return redirect()->route('posts.show', $post->id);
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(Post $post)
+    {
+        return view('posts.show', compact('post'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Post $post)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, Post $post)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Post $post)
+    {
+        //
     }
 }

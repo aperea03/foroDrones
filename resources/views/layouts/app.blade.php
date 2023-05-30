@@ -56,7 +56,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="#">Foro</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}">Foro</a>
                 </li>
                 <li class="nav-item ml-2 mr-2">
                     <a class="nav-link" href="#">Sobre nosotros</a>

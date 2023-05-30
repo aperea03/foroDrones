@@ -1,1 +1,0 @@
-{{-- Este será un parcial utilizado para renderizar cada comentario en la vista posts/show.blade.php --}}

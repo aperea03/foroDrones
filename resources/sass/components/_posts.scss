@@ -1,0 +1,19 @@
+.minipost{
+    font-size: 0.8rem;
+    @include medium {
+        font-size: 0.6rem;
+    }
+    text-decoration: none;
+    color: $tx-color-1;
+    div{
+        background-color: $claro;
+        transition: transform 0.5s;
+    }
+    
+}
+.minipost:hover{
+    color: $brillante;
+    div{
+        transform: scale(100.5%);
+    }
+}

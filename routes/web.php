@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginRegisterController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,8 +28,12 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 // Rutas de post y comentarios
-Route::get('/', 'PostController@index')->name('home');
-Route::get('/posts/create', 'PostController@create')->name('posts.create');
-Route::post('/posts', 'PostController@store')->name('posts.store');
-Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
-Route::post('/posts/{post}/comments', 'CommentController@store')->name('comments.store');
+Route::resource('posts', PostController::class);
+Route::resource('posts.comments', CommentController::class);
+
+
+// Route::get('/', 'PostController@index')->name('home');
+// Route::get('/posts/create', 'PostController@create')->name('posts.create');
+// Route::post('/posts', 'PostController@store')->name('posts.store');
+// Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
+// Route::post('/posts/{post}/comments', 'CommentController@store')->name('comments.store');
