@@ -62,7 +62,7 @@
                     <a class="nav-link" href="#">Sobre nosotros</a>
                 </li>
                 <li class="nav-item ml-2 mr-2">
-                  <a class="nav-link" href="#">+ POST</a>
+                    <a class="nav-link btnsmall text-center" href="{{ route('posts.create') }}"><i class="bi bi-plus-square-dotted"> POST</i></a>
                 </li>
               </ul>
             <ul class="navbar-nav ms-auto">

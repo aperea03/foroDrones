@@ -17,3 +17,166 @@
         transform: scale(100.5%);
     }
 }
+// Estilos create Post
+#contact {
+	padding:25px;
+	margin:10px 0;
+    h3 {
+        color: $vibrante;
+        display: block;
+        font-size: 30px;
+        font-weight: 400;
+    }
+    h4 {
+        margin:5px 0 15px;
+        display:block;
+        font-size:13px;
+    }
+    input[type="text"],textarea {
+        width:100%;
+        border:1px solid #CCC;
+        background:#FFF;
+        margin:0 0 5px;
+        padding:10px;
+    }
+    input[type="text"]:hover,textarea:hover {
+        -webkit-transition:border-color 0.3s ease-in-out;
+        -moz-transition:border-color 0.3s ease-in-out;
+        transition:border-color 0.3s ease-in-out;
+        border:1px solid #AAA;
+    }
+    textarea {
+        height:300px;
+        max-width:100%;
+      resize:none;
+    }
+    button[type="submit"] {
+        cursor:pointer;
+        width:100%;
+        border:none;
+        background: $brillante;
+        color:#FFF;
+        margin:0 0 5px;
+        padding:10px;
+        font-size:15px;
+    }
+    button[type="submit"]:hover {
+        background:$vibrante;
+        transition:background-color 0.3s ease-in-out;
+    }
+    button[type="submit"]:active {
+        box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); 
+    }
+    input:focus,textarea:focus {
+        outline:0;
+        border:1px solid #999;
+    }
+}
+.custom-select {
+    appearance: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    width: 50%;
+    cursor: pointer;
+  
+    &:focus {
+      outline: none;
+      border-color: $brillante;
+    }
+  
+    &::-ms-expand {
+      display: none;
+    }
+  
+    option {
+      padding: 10px;
+    }
+}
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+// Estilos POSTS y COMENTARIOS
+.minitxt{
+    font-size: 0.8rem;
+    margin-left: 10px;
+    margin-top: 10px;
+    line-height: 1px;
+}
+.comentdiv{
+    width: 70%;
+    @include medium {
+        width: 90%;
+    }
+}
+// Boton borrado
+.buttondel {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: #fafafa;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    background-color: #920101;
+    border: solid 1px #4d00004d;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    .button-text {
+        position: relative;
+        z-index: 2;
+      }
+    .fill-container {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        padding-bottom: 100%;
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .fill-container::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(82, 12, 0);
+        border-radius: 50px;
+        transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        transform: translateY(-100%);
+      }
+}
+.buttondel:hover {
+    border-color: blue;
+    transform: translateY(-4px);
+    .fill-container {
+        transform: translateY(-50%) rotate(0);
+    }
+    .fill-container::after {
+        transform: translateY(0);
+    }
+}
+.buttondel2{
+    padding: 2px 5px;
+}

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Post;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 
@@ -28,7 +28,17 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'content' => 'required',
+        ]);
+
+        $post = Comment::create([
+            'content' => $request->input('content'),
+            'user_id' => auth()->id(),
+            'post_id' => $request->input('post_id'),
+        ]);
+
+        return redirect()->route('posts.show', $request->input('post_id'));
     }
 
     /**
@@ -60,6 +70,9 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-        //
+        $id_post = $comment->post_id;
+        $comment->delete();
+        return redirect()->route('posts.show',$id_post)
+        ->with('success', 'El comentario ha sido eliminado exitosamente.');
     }
 }

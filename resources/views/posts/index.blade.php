@@ -30,10 +30,20 @@
             <h2 class="titulo_1 text-center fw-bold mt-4">CATEGORÍAS</h2>
             <h4 class="text-center mb-4">Busca posts sobre el tema que más te interesa ¿A que esperas?</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
-
+            <fieldset class="mb-4 text-center">
+                <select name="categoria" tabindex="6" class="custom-select">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                    <!-- Agrega más opciones según tus necesidades -->
+                </select>
+            </fieldset>
             <h2 class="titulo_1 text-center fw-bold mt-4">NUEVO POST</h2>
             <h4 class="text-center mb-4">Publica tu post ¡Adelante!</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
+            <div class="text-center">
+                <a class="btn shadow text-center" href="{{ route('posts.create') }}"><h5>NUEVO POST <i class="bi bi-plus-square-dotted"></i></h5></a>
+            </div>
         </div>
     </div>
 </div>

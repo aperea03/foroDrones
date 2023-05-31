@@ -58,12 +58,12 @@
 
               <div class="row event1 shadow">
                 <div class="col-lg-8 d-flex flex-column justify-content-center">
-                  <h1 class="mb-4">TOMATE AIR MEETING 2022</h1>
-                  <h5>El XIV “Tomate Air Meeting” se desarrolló durante tres jornadas, del viernes, 30 de septiembre, 
+                  <h2 class="mb-4">TOMATE AIR MEETING 2022</h2>
+                  <h6>El XIV “Tomate Air Meeting” se desarrolló durante tres jornadas, del viernes, 30 de septiembre, 
                     hasta ayer domingo 2 de octubre, aunque bien es cierto que desde el jueves por la tarde ya comenzaron 
                     a llegar muchas autocaravanas. El evento se cerró con un balance muy positivo, según lo informado 
                     por el Club Radio Control Los Palacios, entidad organizadora que ha contado, como es habitual, con la 
-                    colaboración de la Delegación de Deportes del Ayuntamiento palaciego.</h5>
+                    colaboración de la Delegación de Deportes del Ayuntamiento palaciego.</h6>
                     <p class="mt-3">Más info en <a href="https://www.facebook.com/pages/category/sports/Club-RC-Los-Palacios-Aeromodelismo-114156876631388/">
                       https://www.facebook.com/Club-RC-Los-Palacios-Aeromodelismo-114156876631388/</a></p>
                 </div>
@@ -76,25 +76,25 @@
                   <img src="{{URL::asset('images/eventos/event2.jpg')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-lg-8 d-flex flex-column justify-content-center">
-                  <h1>DRONE EXPO MADRID 2023</h1>
-                  <h5>DRONExpo es el encuentro referente de los profesionales de los drones y sus aplicaciones, 
+                  <h2>DRONE EXPO MADRID 2023</h2>
+                  <h6>DRONExpo es el encuentro referente de los profesionales de los drones y sus aplicaciones, 
                     diseñado a medida de la industria española de drones, integrando todos los subsectores, para 
                     presentar las novedades del sector, encontrar oportunidades de colaboración entre empresas y 
                     con las administraciones, promover proyectos y negocios, y estar a la vanguardia en información 
-                    sobre el futuro tecnológico no tripulado.</h5>
+                    sobre el futuro tecnológico no tripulado.</h6>
                     <p class="mt-3">Más info en <a href="https://www.dronexpo.es/">https://www.dronexpo.es/</a></p>
                 </div>
               </div>
               <div class="row event3 shadow">
                 <div class="col-lg-8">
-                  <h1>AGUACATE MODEL AIRSHOW</h1>
-                  <h5>¡Vuelve a arrancar motores el Aguacate Model Airshow!
+                  <h2>AGUACATE MODEL AIRSHOW</h2>
+                  <h6>¡Vuelve a arrancar motores el Aguacate Model Airshow!
                     <br>
                     Tras el éxito de la primera edición, el Aguacate Model Airshow 2023 se prepara para volver a llenar los cielos de Vélez Málaga pero no solo de aeromodelos.
                     <br>
                     Y es que, tendemos a pensar en réplicas de pequeño tamaño, pero en este festival podremos ver maquetas de más de tres metros volando a 300 km/h.
                     <br>
-                    Sin duda, es un evento espectacular que no te puedes perder. ¿Quieres saber los detalles? ¡Te lo contamos todo!</h5>
+                    Sin duda, es un evento espectacular que no te puedes perder. ¿Quieres saber los detalles? ¡Te lo contamos todo!</h6>
                     <p class="mt-3">Más info en <a href="https://www.oneair.es/aguacate-model-air-show/">https://www.oneair.es/aguacate-model-air-show/</a></p>
                 </div>
                 <div class="col-lg-4">
@@ -112,7 +112,7 @@
                   <img src="{{URL::asset('images/logo.png')}}" alt="ForoDrones" class="img-fluid">
                 </div>
                 <div class="col-6 foroinfo_btn d-flex justify-content-center align-items-center">
-                    <a class="btn shadow" href="{{ route('register') }}"><h3>ÚNETE AHORA</h3></a>
+                    <a class="btn shadow" href="{{ route('register') }}"><h4>ÚNETE AHORA</h4></a>
                 </div>
               </div>
 

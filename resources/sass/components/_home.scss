@@ -73,18 +73,6 @@
       max-height: 200px;
     }
   }
-  .btn{
-    background-color: $vibrante;
-    width: 50%;
-    min-width: 100px;
-    text-decoration: none;
-    color: $suave;
-    transition: transform 0.5s;
-  }
-  .btn:hover{
-    transform: scale(120%);
-  }
-  
 }
 // FOOTER
 .footer-lg{

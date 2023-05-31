@@ -28,6 +28,8 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 });
 // Rutas de post y comentarios
+Route::delete('/commentdel/{comment}', [CommentController::class,'destroy'])->name('comment.destroy')->middleware("auth");
+Route::delete('/postdel/{post}', [PostController::class,'destroy'])->name('post.destroy')->middleware("auth");
 Route::resource('posts', PostController::class);
 Route::resource('posts.comments', CommentController::class);
 
