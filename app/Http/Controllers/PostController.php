@@ -13,7 +13,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->get();
+        // $posts = Post::latest()->get();
+        $posts = Post::orderBy('id','desc')->paginate(2);
 
         return view('posts.index', compact('posts'));
     }
@@ -34,11 +35,13 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required',
             'content' => 'required',
+            'categoria' => 'required',
         ]);
 
         $post = Post::create([
             'title' => $request->input('title'),
             'content' => $request->input('content'),
+            'category' => $request->input('categoria'),
             'user_id' => auth()->id(),
         ]);
 
@@ -50,7 +53,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        $comments = Comment::latest()->get();
+        $comments = Comment::where('post_id', $post->id)->latest()->paginate(3);
         return view('posts.show', compact('post','comments'));
     }
 

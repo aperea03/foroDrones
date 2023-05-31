@@ -21,15 +21,19 @@
                 </fieldset>
                 <h3>Categoria</h3>
                 <fieldset class="mb-4">
-                    <select name="categoria" tabindex="6" class="custom-select">
-                        <option value="opcion1">Opción 1</option>
-                        <option value="opcion2">Opción 2</option>
-                        <option value="opcion3">Opción 3</option>
-                        <!-- Agrega más opciones según tus necesidades -->
+                    <select name="categoria" tabindex="6" class="custom-select" required>
+                        <option value="Dudas/Problemas">Dudas o Problemas</option>
+                        <option value="Eventos">Eventos</option>
+                        <option value="Debates">Debates</option>
+                        <option value="Montajes">Montajes</option>
+                        <option value="Ventas">Ventas</option>
+                        <option value="Busqueda">Busqueda</option>
+                        <option value="Otro">Otro</option>
                     </select>
                 </fieldset>
                 <fieldset>
-                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" tabindex="7">PUBLICAR <i class="bi bi-cloud-plus"></i></button>
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" tabindex="7">
+                        PUBLICAR <i class="bi bi-cloud-plus"></i></button>
                 </fieldset>
                   <p><i class="bi bi-exclamation-triangle-fill"></i> Cualquier post indebidamente publicado será eliminado por moderadores.
                     Cualquier duda, contacta con nosotros

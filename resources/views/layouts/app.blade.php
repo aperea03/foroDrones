@@ -61,9 +61,12 @@
                 <li class="nav-item ml-2 mr-2">
                     <a class="nav-link" href="#">Sobre nosotros</a>
                 </li>
+                @guest
+                @else
                 <li class="nav-item ml-2 mr-2">
                     <a class="nav-link btnsmall text-center" href="{{ route('posts.create') }}"><i class="bi bi-plus-square-dotted"> POST</i></a>
                 </li>
+                @endguest
               </ul>
             <ul class="navbar-nav ms-auto">
                 @guest

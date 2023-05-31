@@ -30,12 +30,6 @@ Route::controller(LoginRegisterController::class)->group(function() {
 // Rutas de post y comentarios
 Route::delete('/commentdel/{comment}', [CommentController::class,'destroy'])->name('comment.destroy')->middleware("auth");
 Route::delete('/postdel/{post}', [PostController::class,'destroy'])->name('post.destroy')->middleware("auth");
+Route::post('/category', [PostController::class,'filter'])->name('post.category');
 Route::resource('posts', PostController::class);
 Route::resource('posts.comments', CommentController::class);
-
-
-// Route::get('/', 'PostController@index')->name('home');
-// Route::get('/posts/create', 'PostController@create')->name('posts.create');
-// Route::post('/posts', 'PostController@store')->name('posts.store');
-// Route::get('/posts/{post}', 'PostController@show')->name('posts.show');
-// Route::post('/posts/{post}/comments', 'CommentController@store')->name('comments.store');

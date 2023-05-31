@@ -27,22 +27,41 @@
                 </a>
                 @endforeach
             </div>
+            <div class="m-3">
+                {{ $posts->links('pagination::bootstrap-5') }}
+            </div>
             <h2 class="titulo_1 text-center fw-bold mt-4">CATEGORÍAS</h2>
             <h4 class="text-center mb-4">Busca posts sobre el tema que más te interesa ¿A que esperas?</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
-            <fieldset class="mb-4 text-center">
-                <select name="categoria" tabindex="6" class="custom-select">
-                    <option value="opcion1">Opción 1</option>
-                    <option value="opcion2">Opción 2</option>
-                    <option value="opcion3">Opción 3</option>
-                    <!-- Agrega más opciones según tus necesidades -->
-                </select>
-            </fieldset>
+            <form action="{{ route('post.category') }}" method="POST" id="contact">
+                @csrf
+                <fieldset class="mb-4 text-center">
+                    <select name="categoria" tabindex="6" class="custom-select" required>
+                        <option value="Dudas/Problemas">Dudas o Problemas</option>
+                        <option value="Eventos">Eventos</option>
+                        <option value="Debates">Debates</option>
+                        <option value="Montajes">Montajes</option>
+                        <option value="Ventas">Ventas</option>
+                        <option value="Busqueda">Busqueda</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </fieldset>
+                <fieldset class="text-center">
+                    <button name="submit" type="submit" id="contact-submit" data-submit="...Sending" tabindex="7" style="width: 50%;">
+                        <i class="bi bi-search"></i> BUSCAR
+                    </button>
+                </fieldset>
+            </form>
             <h2 class="titulo_1 text-center fw-bold mt-4">NUEVO POST</h2>
             <h4 class="text-center mb-4">Publica tu post ¡Adelante!</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
-            <div class="text-center">
+            <div class="text-center mb-5">
+                @guest
+                <a class="btn shadow text-center" href="{{ route('login') }}"><h5>NUEVO POST <i class="bi bi-plus-square-dotted"></i></h5></a>
+                @else
                 <a class="btn shadow text-center" href="{{ route('posts.create') }}"><h5>NUEVO POST <i class="bi bi-plus-square-dotted"></i></h5></a>
+                @endguest
+                
             </div>
         </div>
     </div>
