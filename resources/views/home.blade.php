@@ -8,7 +8,7 @@
 </header>
 <div class="container-fluid principal">
     <div class="row justify-content-center">
-        <div class="col-md-8 main-container mt-2 rounded-3 shadow">
+        <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
             <h2 class="titulo_1 text-center fw-bold mt-4">PRÓXIMOS EVENTOS</h2>
             <h4 class="text-center mb-4">¿Quieres saber cuales son los eventos más cercanos? Infórmate y participa</h4>
             {{-- Carousel --}}

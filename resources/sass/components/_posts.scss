@@ -168,7 +168,7 @@ fieldset {
       }
 }
 .buttondel:hover {
-    border-color: blue;
+    border-color: rgb(0, 0, 0);
     transform: translateY(-4px);
     .fill-container {
         transform: translateY(-50%) rotate(0);
@@ -179,4 +179,11 @@ fieldset {
 }
 .buttondel2{
     padding: 2px 5px;
+}
+.buttonedit{
+    background-color: #6d6f00;
+    border: solid 1px #4d4a004d;
+    .fill-container::after {
+        background-color: rgb(82, 74, 0);
+      }
 }

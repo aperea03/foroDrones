@@ -8,7 +8,7 @@
 </header>
 <div class="container-fluid principal">
     <div class="row justify-content-center">
-        <div class="col-md-8 main-container mt-2 rounded-3 shadow">
+        <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
             <h2 class="titulo_1 text-center fw-bold mt-4">ÚLTIMOS POSTS</h2>
             <h4 class="text-center mb-4">Descubre los posts y preguntas más frecuentes</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>

@@ -18,16 +18,55 @@
                 @guest
                 @else
                 @if($post->user->id == Auth::user()->id)
-                <form action="{{ route('post.destroy', $post) }}" method="POST" class="text-end">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="buttondel m-2">
+                <div class="d-flex flex-row-reverse">
+                    <!-- BOTON MODAL 1 -->
+                    <button type="button" class="buttondel m-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <span class="button-text"><i class="bi bi-trash"></i></span>
                         <div class="fill-container"></div>
                     </button>
-                </form>
+                    <!-- Modal 1 -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header text-center">
+                            <h5 class="modal-title" id="exampleModalLabel">¡ CUIDADO !</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body text-center">
+                                <div class="alert alert-danger" role="alert">
+                                    ¿Seguro que quieres eliminar el post?
+                                </div>
+                                <form action="{{ route('post.destroy', $post) }}" method="POST" class="text-center">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="buttondel m-2">
+                                        <span class="button-text">ELIMINAR</span>
+                                        <div class="fill-container"></div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <form action="{{ route('post.edit', $post) }}" method="POST" class="text-end">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="buttondel buttonedit m-2">
+                            <span class="button-text"><i class="bi bi-pencil"></i></span>
+                            <div class="fill-container"></div>
+                        </button>
+                    </form>
+                    <!-- BOTON MODAL 2 -->
+                    {{-- <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        <img src="{{URL::asset('images/x-lg.svg')}}"> 
+                        Eliminar Cuenta
+                    </button> --}}
+                </div>
                 @endif
                 @endguest
+                <div class="d-flex align-items-center justify-content-center">
+                    <p class="minitxt mb-4">Última modificación: <strong>{{ $post->updated_at }}</strong></p>
+                </div>
             </div>
             <div>
                 @guest
@@ -50,10 +89,16 @@
                 </form>
                 @endguest
                 <h3>Comentarios: </h3>
+                @if($comments->count() < 1)
+                <h5 class="text-center">No ha comentarios disponibles.</h5>
+                @endif
                 @foreach ($comments as $coment)
                 <div class="shadow m-4 p-2 p-md-3 comentdiv border rounded bg-superlight">
                     <div class="d-flex justify-content-between">
-                        <h5><i class="bi bi-chat-right"></i> <strong>{{ $coment->user->name }}</strong></h5>
+                        <h5>
+                            <i class="bi bi-chat-right"></i> <strong>{{ $coment->user->name }}</strong>
+                            <p class="minitxt mb-4">{{ $coment->user->email }}</p>
+                        </h5>
                         @guest
                         @else
                         @if($coment->user->id == Auth::user()->id)

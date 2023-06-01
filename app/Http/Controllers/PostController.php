@@ -62,7 +62,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -70,7 +70,20 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required',
+            'categoria' => 'required',
+        ]);
+    
+        $post->update([
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'category' => $request->input('categoria'),
+        ]);
+    
+        return redirect()->route('posts.show', $post->id)
+            ->with('success', 'El post ha sido actualizado exitosamente.');
     }
 
     /**
