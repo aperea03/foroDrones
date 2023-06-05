@@ -1,8 +1,42 @@
-@extends('layouts.app')
+@extends('layouts.simple')
 
 @section('content')
+<header class="hero-image" style="background-image: url({{URL::asset('images/login_hero.jpg')}});">
+    <div class="container">
+      <h1 class="hero-text">¡Bienvenido!</h1>
+    </div>
+</header>
+<div class="custom-login mt-3 mt-lg-5">
+    <form class="form_main" action="{{ route('authenticate') }}" method="post">
+        @csrf
+        <p class="heading"><i class="bi bi-door-open"></i> Iniciar sesión</p>
 
-<div class="row justify-content-center mt-5 pt-5 login-p">
+        {{-- Input Email --}}
+        <div class="inputContainer">
+            <i class="bi bi-envelope inputIcon"></i>
+            <input placeholder="Email" type="email" class="inputField @error('email') is-invalid @enderror" id="email" name="email" value="{{ old('email') }}">
+        </div>
+        
+        {{-- Input contraseña --}}
+        <div class="inputContainer">
+            <i class="bi bi-lock-fill inputIcon"></i>
+            <input placeholder="Contraseña" id="password" class="inputField @error('password') is-invalid @enderror" type="password" name="password">
+        </div>
+    @if ($errors->has('email'))
+        <span class="text-danger">{{ $errors->first('email') }}</span>
+    @endif         
+    @if ($errors->has('password'))
+        <span class="text-danger">{{ $errors->first('password') }}</span>
+    @endif  
+    <button id="button" value="Login">ACEPTAR</button>
+        <div class="signupContainer">
+            <p>¿No tienes una cuenta?</p>
+            <a href="{{ route('register') }}">Registrate</a>
+        </div>
+    </form>
+    
+</div>
+{{-- <div class="row justify-content-center mt-5 pt-5 login-p">
     <div class="col-md-8">
 
         <div class="card">
@@ -36,42 +70,6 @@
             </div>
         </div>
     </div>    
-</div>
-{{-- footer --}}
-<footer class="border-top pt-5 mt-5">
-    <div class="container-xl">
-        <div class="row text-center">
-            <div class="col-md-4 mb-4 mb-md-0">
-                <h3 class="mb-4">Categorías</h3>
-                <nav class="d-flex flex-column">
-                    <a class="text-decoration-none text-dark" href="#">Shishas</a>
-                    <a class="text-decoration-none text-dark" href="#">Pods</a>
-                    <a class="text-decoration-none text-dark" href="#">Accesorios</a>
-                    <a class="text-decoration-none text-dark" href="#">Encendido</a>
-                    <a class="text-decoration-none text-dark" href="#">Cazoletas</a>
-                </nav>
-            </div>
+</div> --}}
 
-            <div class="col-md-4 mb-4 mb-md-0">
-                <h3 class="mb-4">Información</h3>
-                <nav class="d-flex flex-column">
-                    <a class="text-decoration-none text-dark" href="#">¿Quienes somos?</a>
-                    <a class="text-decoration-none text-dark" href="#">Ubicanos</a>
-                    <a class="text-decoration-none text-dark" href="#">forodrones123@gmail.com</a>
-                    <a class="text-decoration-none text-dark" href="#">664 34 56 33</a>
-                </nav>
-            </div>
-
-            <div class="col-md-4 mb-4 mb-md-0">
-                <h3 class="mb-4">Siguenos</h3>
-                <nav class="d-flex flex-column">
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-facebook"></i></a></h3>
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-instagram"></i></a></h3>
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitter"></i></a></h3>
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitch"></i></a></h3>
-                </nav>
-            </div>
-        </div>
-    </div>
-</footer>
 @endsection

@@ -4,7 +4,11 @@
 <div class="container-fluid principal">
     <div class="row justify-content-center">
         <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
-
+            {{-- BOTÓN REGRESO --}}
+            <div class="text-left m-3">
+                <a class="btn shadow text-center" href="{{ route('posts.index') }}"><i class="bi bi-arrow-left-square-fill"></i> VOLVER</a>
+            </div>
+            {{-- CONTENIDO PRINCIPAL POST --}}
             <div class="shadow m-2 p-1 p-md-2 mt-3 bg-superlight">
                 <p class="minitxt mb-4">Categoría: <strong>{{ $post->category }}</strong></p>
                 <p class="minitxt">Título:</p>
@@ -24,7 +28,7 @@
                         <span class="button-text"><i class="bi bi-trash"></i></span>
                         <div class="fill-container"></div>
                     </button>
-                    <!-- Modal 1 -->
+                    <!-- MODAL 1 -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -36,6 +40,7 @@
                                 <div class="alert alert-danger" role="alert">
                                     ¿Seguro que quieres eliminar el post?
                                 </div>
+                                {{-- BOTÓN ELIMINAR POST --}}
                                 <form action="{{ route('post.destroy', $post) }}" method="POST" class="text-center">
                                     @csrf
                                     @method('DELETE')
@@ -48,6 +53,7 @@
                         </div>
                         </div>
                     </div>
+                    {{-- BOTON EDITAR POST --}}
                     <form action="{{ route('post.edit', $post) }}" method="POST" class="text-end">
                         @csrf
                         @method('DELETE')
@@ -56,11 +62,6 @@
                             <div class="fill-container"></div>
                         </button>
                     </form>
-                    <!-- BOTON MODAL 2 -->
-                    {{-- <button type="button" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                        <img src="{{URL::asset('images/x-lg.svg')}}"> 
-                        Eliminar Cuenta
-                    </button> --}}
                 </div>
                 @endif
                 @endguest
@@ -69,6 +70,7 @@
                 </div>
             </div>
             <div>
+                {{-- FORMULARIO PUBLICACIÓN COMENTARIO --}}
                 @guest
                 <form action="" id="contact" class="text-center">
                     <h3>Publica tu comentario: </h3>
@@ -88,10 +90,12 @@
                     </fieldset>
                 </form>
                 @endguest
+                {{-- SECTION COMENTARIOS --}}
                 <h3>Comentarios: </h3>
                 @if($comments->count() < 1)
                 <h5 class="text-center">No ha comentarios disponibles.</h5>
                 @endif
+                {{-- LISTADO COMENTARIOS --}}
                 @foreach ($comments as $coment)
                 <div class="shadow m-4 p-2 p-md-3 comentdiv border rounded bg-superlight">
                     <div class="d-flex justify-content-between">
@@ -118,6 +122,7 @@
                 </div>
                 @endforeach
             </div>
+            {{-- PAGINACIÓN BOOTSTRAP --}}
             <div class="m-3">
                 {{ $comments->links('pagination::bootstrap-5') }}
             </div>

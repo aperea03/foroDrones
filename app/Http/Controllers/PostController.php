@@ -14,9 +14,18 @@ class PostController extends Controller
     public function index()
     {
         // $posts = Post::latest()->get();
-        $posts = Post::orderBy('id','desc')->paginate(2);
+        $posts = Post::orderBy('id','desc')->paginate(8);
 
         return view('posts.index', compact('posts'));
+    }
+
+    // List by category
+    public function filter(Request $request)
+    {
+        // $posts = Post::latest()->get();
+        $posts = Post::where('category', $request->input('categoria'))->orderBy('id', 'desc')->paginate(10);
+
+        return view('posts.category', compact('posts'));
     }
 
     /**
@@ -53,7 +62,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        $comments = Comment::where('post_id', $post->id)->latest()->paginate(3);
+        $comments = Comment::where('post_id', $post->id)->latest()->paginate(5);
         return view('posts.show', compact('post','comments'));
     }
 

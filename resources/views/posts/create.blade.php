@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+{{-- HERO PRINCIPAL --}}
 <header class="hero-image" style="background-image: url({{URL::asset('images/hero3.jpg')}});">
     <div class="container">
       <h1 class="hero-text">Publica tu post aquí</h1>
@@ -9,6 +10,7 @@
 <div class="container-fluid principal">
     <div class="row justify-content-center">
         <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
+            {{-- FORMULARIO RELLENO --}}
             <form action="{{ route('posts.store') }}" method="POST" id="contact">
                 @csrf
                 <h3>Nuevo Post</h3>

@@ -19,32 +19,6 @@
             <img src="{{URL::asset('images/loading.gif')}}" alt="" class="img-fluid">
         </div>
     </div>
-    {{-- BARRA INFORMACIÓN BÁSICA --}}
-    <div class="info_bar d-flex justify-content-left w-100">
-        <div class="info1">
-            <i class="bi bi-info-square"></i>
-            +info 
-        </div>
-        <div class="info2">
-            <i class="bi bi-telephone-fill"></i>&nbsp;&nbsp;
-            +34 655 93 44 32&nbsp;&nbsp;
-            <i class="bi bi-whatsapp"></i>
-        </div>
-        <div class="info3">
-        Registrate y únete a la comunidad
-        </div>
-    </div>
-    <!-- LOGO PRINCIPAL -->
-    <div class="d-flex logo">
-        <a href="{{ url('/') }}">
-          <!-- <-----REDIRECCION -->
-          <img src="{{URL::asset('images/logo.png')}}" alt="ForoDrones" class="img-fluid" />
-        </a>
-        <div class="logo_info">
-            El mejor foro sobre drones en español, lo tienes aquí
-            <img src="{{URL::asset('images/bandera.png')}}" alt="ForoDrones" class="img-fluid">
-        </div>
-    </div>
 
     {{-- Barra de navegacións --}}
     <nav class="navbar navbar-expand-md navbar-custom sticky-top shadow">

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+{{-- hero principal --}}
 <header class="hero-image" style="background-image: url({{URL::asset('images/hero2.jpg')}});">
     <div class="container">
       <h1 class="hero-text">¡Bienvenido a nuestro Foro!</h1>
@@ -9,10 +10,10 @@
 <div class="container-fluid principal">
     <div class="row justify-content-center">
         <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
-            <h2 class="titulo_1 text-center fw-bold mt-4">ÚLTIMOS POSTS</h2>
+            <h2 class="titulo_1 text-center fw-bold mt-4"><i class="bi bi-newspaper"></i> ÚLTIMOS POSTS</h2>
             <h4 class="text-center mb-4">Descubre los posts y preguntas más frecuentes</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
-            {{-- Contenedor posts --}}
+            {{-- Contenedor posts individuales --}}
             <div class="col-12 m-2 rounded border">
                 @foreach ($posts as $post)
                 <a href="{{ route('posts.show',$post->id) }}"  class="minipost">
@@ -27,13 +28,15 @@
                 </a>
                 @endforeach
             </div>
+            {{-- Botones paginación bootstrap 6 --}}
             <div class="m-3">
                 {{ $posts->links('pagination::bootstrap-5') }}
             </div>
-            <h2 class="titulo_1 text-center fw-bold mt-4">CATEGORÍAS</h2>
+            <h2 class="titulo_1 text-center fw-bold mt-4"><i class="bi bi-bookmark"></i> CATEGORÍAS</h2>
             <h4 class="text-center mb-4">Busca posts sobre el tema que más te interesa ¿A que esperas?</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
-            <form action="{{ route('post.category') }}" method="POST" id="contact">
+            {{-- Formulario busqueda por categorías --}}
+            <form action="{{ route('posts.category') }}" method="POST" id="contact">
                 @csrf
                 <fieldset class="mb-4 text-center">
                     <select name="categoria" tabindex="6" class="custom-select" required>
@@ -52,7 +55,8 @@
                     </button>
                 </fieldset>
             </form>
-            <h2 class="titulo_1 text-center fw-bold mt-4">NUEVO POST</h2>
+            {{-- Section para crear un post --}}
+            <h2 class="titulo_1 text-center fw-bold mt-4"><i class="bi bi-plus-square-dotted"></i> NUEVO POST</h2>
             <h4 class="text-center mb-4">Publica tu post ¡Adelante!</h4>
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
             <div class="text-center mb-5">

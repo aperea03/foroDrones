@@ -89,7 +89,7 @@ class LoginRegisterController extends Controller
         }
 
         return back()->withErrors([
-            'email' => 'Your provided credentials do not match in our records.',
+            'email' => 'Tus credenciales no coinciden.',
         ])->onlyInput('email');
 
     } 
@@ -108,7 +108,7 @@ class LoginRegisterController extends Controller
         
         return redirect()->route('login')
             ->withErrors([
-            'email' => 'Please login to access the dashboard.',
+            'email' => 'Por favor, registrate para continuar.',
         ])->onlyInput('email');
     } 
     

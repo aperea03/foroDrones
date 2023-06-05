@@ -54,8 +54,11 @@
                   <span class="visually-hidden">Siguiente</span>
                 </a>
               </div>
+              {{-- APARTADO EVENTOS RELACIONADOS --}}
               <h2 class="titulo_1 text-center fw-bold mt-4 mb-2">EVENTOS RELACIONADOS</h2>
+              <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
 
+              {{-- EVENTO 1 --}}
               <div class="row event1 shadow">
                 <div class="col-lg-8 d-flex flex-column justify-content-center">
                   <h2 class="mb-4">TOMATE AIR MEETING 2022</h2>
@@ -71,6 +74,8 @@
                   <img src="{{URL::asset('images/eventos/event1.jpeg')}}" alt="" class="img-fluid">
                 </div>
               </div>
+
+              {{-- EVENTO 2 --}}
               <div class="row event2 shadow">
                 <div class="col-lg-4">
                   <img src="{{URL::asset('images/eventos/event2.jpg')}}" alt="" class="img-fluid">
@@ -85,6 +90,8 @@
                     <p class="mt-3">Más info en <a href="https://www.dronexpo.es/">https://www.dronexpo.es/</a></p>
                 </div>
               </div>
+
+              {{-- EVENTO 3 --}}
               <div class="row event3 shadow">
                 <div class="col-lg-8">
                   <h2>AGUACATE MODEL AIRSHOW</h2>
@@ -101,6 +108,8 @@
                   <img src="{{URL::asset('images/eventos/event3.jpg')}}" alt="" class="img-fluid">
                 </div>
               </div>
+
+              {{-- SECTION FINAL DEL INICIO --}}
               <h2 class="titulo_1 text-center fw-bold mt-4 mb-2">ÚNETE A NUESTRO FORO</h2>
               <h4 class="text-center mb-4">¿Necesitas más información sobre eventos o dudas generales sobre tus drones?
                 <br>
@@ -115,44 +124,8 @@
                     <a class="btn shadow" href="{{ route('register') }}"><h4>ÚNETE AHORA</h4></a>
                 </div>
               </div>
-
-              {{-- footer --}}
-              <footer class="border-top pt-5 mt-5">
-                <div class="container-xl">
-                    <div class="row text-center">
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <h3 class="mb-4">Categorías</h3>
-                            <nav class="d-flex flex-column">
-                                <a class="text-decoration-none text-dark" href="#">Shishas</a>
-                                <a class="text-decoration-none text-dark" href="#">Pods</a>
-                                <a class="text-decoration-none text-dark" href="#">Accesorios</a>
-                                <a class="text-decoration-none text-dark" href="#">Encendido</a>
-                                <a class="text-decoration-none text-dark" href="#">Cazoletas</a>
-                            </nav>
-                        </div>
-            
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <h3 class="mb-4">Información</h3>
-                            <nav class="d-flex flex-column">
-                                <a class="text-decoration-none text-dark" href="#">¿Quienes somos?</a>
-                                <a class="text-decoration-none text-dark" href="#">Ubicanos</a>
-                                <a class="text-decoration-none text-dark" href="#">forodrones123@gmail.com</a>
-                                <a class="text-decoration-none text-dark" href="#">664 34 56 33</a>
-                            </nav>
-                        </div>
-            
-                        <div class="col-md-4 mb-4 mb-md-0">
-                            <h3 class="mb-4">Siguenos</h3>
-                            <nav class="d-flex flex-column">
-                                <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-facebook"></i></a></h3>
-                                <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-instagram"></i></a></h3>
-                                <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitter"></i></a></h3>
-                                <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitch"></i></a></h3>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+              <h4 class="text-center mb-4">Más información</h4>
+              <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
         </div>    
     </div>
 </div>
