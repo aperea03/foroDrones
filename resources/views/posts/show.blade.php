@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-fluid principal">
+<div class="container-fluid principal" style="background-image: url({{URL::asset('images/background_chat.jpg')}});">
     <div class="row justify-content-center">
         <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
             {{-- BOTÓN REGRESO --}}
