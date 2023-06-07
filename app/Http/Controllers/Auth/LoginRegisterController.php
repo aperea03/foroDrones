@@ -83,9 +83,7 @@ class LoginRegisterController extends Controller
         if(Auth::attempt($credentials))
         {
             $request->session()->regenerate();
-            return view('home');
-            // return redirect()->route('dashboard')
-            //     ->withSuccess('You have successfully logged in!');
+            return redirect()->route('home')->withSuccess('¡Bienvenido!');
         }
 
         return back()->withErrors([
@@ -123,9 +121,7 @@ class LoginRegisterController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return view('home');
-        // return redirect()->route('login')
-        //     ->withSuccess('You have logged out successfully!');;
+        return redirect()->route('home')->withSuccess('¡Te esperamos pronto!');;
     }    
 
 }

@@ -68,10 +68,14 @@
               @guest
               ...
               @else
-                {{-- <a href="{{route('deleteuser',Auth::user()->id)}}" class="btn btn-danger">Eliminar {{ Auth::user()->email }}</a> --}}
+            <div class="del_account text-center m-5">
+                <a href="{{route('user.destroy', Auth::user()->id)}}" class="btn">Eliminar mi cuenta</a>
+            </div>
+                
               @endguest
         </div>
     </div>
     </div>
 </div>
+
 @endsection

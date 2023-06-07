@@ -15,6 +15,9 @@
             <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
             {{-- Contenedor posts individuales --}}
             <div class="col-12 m-2 rounded border">
+                @if($posts->count() < 1)
+                <h5 class="text-center">No ha posts disponibles.</h5>
+                @endif
                 @foreach ($posts as $post)
                 <a href="{{ route('posts.show',$post->id) }}"  class="minipost">
                     <div class="shadow m-2 p-1 p-md-2">
@@ -71,5 +74,33 @@
     </div>
 </div>
 
+{{-- Arranca el toast al llegar un mensaje del controlador --}}
+@if ($message = Session::get('success'))
+            
+<script>
+    window.addEventListener('load', function() {
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+        var toastList = toastElList.map(function (toastEl) {
+        return new bootstrap.Toast(toastEl);
+        });
+        toastList.forEach((toast) => toast.show());
+    });
+</script>
+{{-- TOAST --}}
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+        <img src="{{URL::asset('images/loading.gif')}}" class="rounded me-2" alt="...">
+        <strong class="me-auto">ForoDrones</strong>
+        <small>hace 0 minutos</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+        {{ $message }}
+    </div>
+    </div>
+</div>
+@else
     
+@endif 
 @endsection

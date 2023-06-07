@@ -132,7 +132,7 @@
 
 
 
-{{-- Arranca el toast al crearse una cuenta --}}
+{{-- Arranca el toast al llegar un mensaje del controlador --}}
 @if ($message = Session::get('success'))
             
 <script>
