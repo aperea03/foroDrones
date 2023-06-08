@@ -46,7 +46,7 @@
     <button id="button" value="Register">ACEPTAR</button>
         <div class="signupContainer">
             <p>¿Ya tienes una cuenta?</p>
-            <a href="{{ route('register') }}">Iniciar sesión</a>
+            <a href="{{ route('login') }}">Iniciar sesión</a>
         </div>
     </form>
     

@@ -20,12 +20,14 @@ class UserController extends Controller
 
     public function showposts(User $user)
     {
-        return view('user.index');
+        $posts = Post::where('user_id', $user->id)->latest()->paginate(20);
+        return view('user.posts', compact('posts'));
     }
 
     public function showcomments(User $user)
     {
-        return view('user.index');
+        $comments = Comment::where('user_id', $user->id)->latest()->paginate(20);
+        return view('user.comments', compact('comments'));
     }
     public function destroy()
     {

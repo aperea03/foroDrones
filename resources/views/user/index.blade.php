@@ -41,11 +41,11 @@
                     <h2 class="text-center"><i class="bi bi-caret-down"></i></h2>
                     <h4 class="text-center mb-4 mt-4">Gestiona tus posts aqui: </h4>
                     <div class="text-center m-3">
-                        <a class="btn shadow text-center" href="{{ route('posts.index') }}"><i class="bi bi-file-earmark-post"></i> MIS POSTS</a>
+                        <a class="btn shadow text-center" href="{{ route('user.posts',Auth::user()) }}"><i class="bi bi-file-earmark-post"></i> MIS POSTS</a>
                     </div>
                     <h4 class="text-center mb-4 mt-4">Gestiona tus comentarios aqui: </h4>
                     <div class="text-center m-3">
-                        <a class="btn shadow text-center" href="{{ route('posts.index') }}"><i class="bi bi-chat"></i> MIS COMENTARIOS</a>
+                        <a class="btn shadow text-center" href="{{ route('user.comments',Auth::user()) }}"><i class="bi bi-chat"></i> MIS COMENTARIOS</a>
                     </div>
                 </div>
             </div>

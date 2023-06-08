@@ -27,7 +27,7 @@
         </div>
         <div class="info2">
             <i class="bi bi-telephone-fill"></i>&nbsp;&nbsp;
-            +34 655 93 44 32&nbsp;&nbsp;
+            +34 664 34 56 33&nbsp;&nbsp;
             <i class="bi bi-whatsapp"></i>
         </div>
         <div class="info3">
@@ -49,17 +49,17 @@
     {{-- Barra de navegacións --}}
     <nav class="navbar navbar-expand-md navbar-custom sticky-top shadow">
         <div class="container">
-          <a class="navbar-brand" href="{{ URL('/') }}"><i class="bi bi-hand-index-thumb-fill"></i> Inicio</a>
+          <a class="navbar-brand" href="{{ URL('/') }}"><i class="bi bi-pin-angle"></i> INICIO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="{{ route('posts.index') }}"><i class="bi bi-newspaper"></i> Foro</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}"><i class="bi bi-newspaper"></i> FORO</a>
                 </li>
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="#"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
+                    <a class="nav-link" href="{{ route('info') }}"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
                 </li>
                 @guest
                 @else
@@ -110,31 +110,32 @@
             <div class="col-md-4 mb-4 mb-md-0">
                 <h3 class="mb-4">Categorías</h3>
                 <nav class="d-flex flex-column">
-                    <a class="text-decoration-none text-dark" href="#">Dudas o Problemas</a>
-                    <a class="text-decoration-none text-dark" href="#">Eventos</a>
-                    <a class="text-decoration-none text-dark" href="#">Debates</a>
-                    <a class="text-decoration-none text-dark" href="#">Ventas</a>
-                    <a class="text-decoration-none text-dark" href="#">Busqueda</a>
+                    <a class="text-decoration-none text-dark">Dudas o Problemas</a>
+                    <a class="text-decoration-none text-dark">Eventos</a>
+                    <a class="text-decoration-none text-dark">Debates</a>
+                    <a class="text-decoration-none text-dark">Ventas</a>
+                    <a class="text-decoration-none text-dark">Busqueda</a>
                 </nav>
             </div>
 
             <div class="col-md-4 mb-4 mb-md-0">
                 <h3 class="mb-4">Información</h3>
                 <nav class="d-flex flex-column">
-                    <a class="text-decoration-none text-dark" href="#">¿Quienes somos?</a>
-                    <a class="text-decoration-none text-dark" href="#">Ubicanos</a>
-                    <a class="text-decoration-none text-dark" href="#">forodrones123@gmail.com</a>
-                    <a class="text-decoration-none text-dark" href="#">664 34 56 33</a>
+                    <a class="text-decoration-none text-dark">¿Quienes somos?</a>
+                    <a class="text-decoration-none text-dark">Ubicanos</a>
+                    <a class="text-decoration-none text-dark">forodrones123@gmail.com</a>
+                    <a class="text-decoration-none text-dark">664 34 56 33</a>
+                    <a class="text-decoration-none text-dark" href="{{ route('info') }}">+info aquí</a>
                 </nav>
             </div>
 
             <div class="col-md-4 mb-4 mb-md-0">
                 <h3 class="mb-4">Siguenos</h3>
                 <nav class="d-flex flex-column">
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-facebook"></i></a></h3>
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-instagram"></i></a></h3>
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitter"></i></a></h3>
-                    <h3><a class="text-decoration-none text-dark" href="#"><i class="bi bi-twitch"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="https://es-es.facebook.com/"><i class="bi bi-facebook"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i></a></h3>
+                    <h3><a class="text-decoration-none text-dark" href="https://www.twitch.tv/"><i class="bi bi-twitch"></i></a></h3>
                 </nav>
             </div>
         </div>

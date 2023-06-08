@@ -23,17 +23,17 @@
     {{-- Barra de navegacións --}}
     <nav class="navbar navbar-expand-md navbar-custom sticky-top shadow">
         <div class="container">
-          <a class="navbar-brand" href="{{ URL('/') }}"><i class="bi bi-hand-index-thumb-fill"></i> Inicio</a>
+          <a class="navbar-brand" href="{{ URL('/') }}"><i class="bi bi-pin-angle"></i> INICIO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="{{ route('posts.index') }}"><i class="bi bi-newspaper"></i> Foro</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}"><i class="bi bi-newspaper"></i> FORO</a>
                 </li>
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="#"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
+                    <a class="nav-link" href="{{ route('info') }}"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
                 </li>
                 @guest
                 @else

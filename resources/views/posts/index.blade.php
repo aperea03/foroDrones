@@ -7,7 +7,7 @@
       <h1 class="hero-text">¡Bienvenido a nuestro Foro!</h1>
     </div>
 </header>
-<div class="container-fluid principal">
+<div class="container-fluid principal" >
     <div class="row justify-content-center">
         <div class="col-md-8 main-container mt-2 mb-2 rounded-3 shadow">
             <h2 class="titulo_1 text-center fw-bold mt-4"><i class="bi bi-newspaper"></i> ÚLTIMOS POSTS</h2>

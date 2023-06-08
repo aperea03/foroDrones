@@ -21,6 +21,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('home');
 })->name('home');
+Route::get('/info', function () {
+    return view('info');
+})->name('info');
 
 // Rutas controlador de login y registro
 Route::controller(LoginRegisterController::class)->group(function() {
@@ -42,5 +45,5 @@ Route::resource('posts.comments', CommentController::class);
 // Rutas ajustes de usuario
 Route::get('/deleteuser', [UserController::class,'destroy'])->name('user.destroy')->middleware("auth");
 Route::get('/usersettings', [UserController::class,'index'])->name('user.index')->middleware("auth");
-Route::post('/usersettings/{user_id}/posts', [UserController::class,'showposts'])->name('user.posts')->middleware("auth");
-Route::post('/usersettings/{user_id}/comments', [UserController::class,'showcomments'])->name('user.comments')->middleware("auth");
+Route::get('/user/{user}/posts', [UserController::class,'showposts'])->name('user.posts')->middleware("auth");
+Route::get('/user/{user}/comments', [UserController::class,'showcomments'])->name('user.comments')->middleware("auth");
