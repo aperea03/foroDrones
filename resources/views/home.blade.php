@@ -1,10 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<header class="hero-image" style="background-image: url({{URL::asset('images/hero.jpg')}});">
-    <div class="container">
-      <h1 class="hero-text">¡Bienvenido a foroDrones!</h1>
-    </div>
+{{-- Header de video --}}
+<header class="video-container">
+  <video autoplay loop muted>
+    <source src="{{URL::asset('videos/hero1.mp4')}}" type="video/mp4">
+  </video>
+  <div class="content">
+    <h1 class="hero-text">¡Bienvenido a foroDrones!</h1>
+  </div>
 </header>
 <div class="container-fluid principal">
     <div class="row justify-content-center">

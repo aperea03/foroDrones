@@ -8,8 +8,8 @@
     background: rgba(255, 255, 255, 0.8);
 }
 
-// Estilos Hero
-.hero-image {
+// Estilos Heros
+.hero-image{
     background-size: cover;
     background-position: center;
     height: 10em;
@@ -18,12 +18,39 @@
     justify-content: center;
     text-align: center;
 }
-
 .hero-text {
   color: $suave;
   font-weight: bolder;
   -webkit-text-stroke: 2px black;
 }
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 14em;
+    }
+    
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 14em;
+      object-fit: cover;
+    }
+    
+    .video-container .content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 14em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      /* Estilos adicionales para el contenido que aparecerá sobre el video */
+    }
+
 //   Estilos carousel
 .carousel-item {
     height: 400px;
