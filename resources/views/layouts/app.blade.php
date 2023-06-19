@@ -22,7 +22,7 @@
     <div class="info_bar d-flex justify-content-left w-100">
         <div class="info1">
             <i class="bi bi-info-square"></i>
-            +info 
+            <a href="https://drive.google.com/file/d/1AqU91B08iVmP-2TSy9YkOA30x3CJ_Ihu/view?usp=sharing">ayuda de uso</a>
         </div>
         <div class="info2">
             <i class="bi bi-telephone-fill"></i>&nbsp;&nbsp;
@@ -48,29 +48,29 @@
     {{-- Barra de navegacións --}}
     <nav class="navbar navbar-expand-md navbar-custom sticky-top shadow">
         <div class="container">
-          <a class="navbar-brand" href="{{ URL('/') }}"><i class="bi bi-pin-angle"></i> INICIO</a>
+          <a class="navbar-brand" href="{{ URL('/') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Página principal"><i class="bi bi-pin-angle"></i> INICIO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="{{ route('posts.index') }}"><i class="bi bi-newspaper"></i> FORO</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Foro principal"><i class="bi bi-newspaper"></i> FORO</a>
                 </li>
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="{{ route('info') }}"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
+                    <a class="nav-link" href="{{ route('info') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Obtén más información"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
                 </li>
                 @guest
                 @else
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link btnsmall text-center" href="{{ route('posts.create') }}"><i class="bi bi-plus-square-dotted"> POST</i></a>
+                    <a class="nav-link btnsmall text-center" href="{{ route('posts.create') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Crea tu post"><i class="bi bi-plus-square-dotted"> POST</i></a>
                 </li>
                 @endguest
               </ul>
             <ul class="navbar-nav ms-auto">
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('login') }}"><i class="bi bi-box-arrow-in-right"></i> Iniciar sesión</a>
+                        <a class="nav-link {{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('login') }}" ><i class="bi bi-box-arrow-in-right"></i> Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="{{ route('register') }}"><i class="bi bi-person-plus"></i> Regístrate</a>
@@ -82,7 +82,7 @@
                         </a>
                         <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item text-primary" href="{{ route('user.index') }}"><i class="bi bi-gear"></i> Ajustes</a>
+                            <a class="dropdown-item text-primary" href="{{ route('user.index') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Gestiona tu usuario"><i class="bi bi-gear"></i> Ajustes</a>
                         </li>
                         
                         <li><a class="dropdown-item text-danger" href="{{ route('logout') }}"

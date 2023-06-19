@@ -23,22 +23,22 @@
     {{-- Barra de navegacións --}}
     <nav class="navbar navbar-expand-md navbar-custom sticky-top shadow">
         <div class="container">
-          <a class="navbar-brand" href="{{ URL('/') }}"><i class="bi bi-pin-angle"></i> INICIO</a>
+          <a class="navbar-brand" href="{{ URL('/') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Página principal"><i class="bi bi-pin-angle"></i> INICIO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="{{ route('posts.index') }}"><i class="bi bi-newspaper"></i> FORO</a>
+                    <a class="nav-link" href="{{ route('posts.index') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Foro principal"><i class="bi bi-newspaper"></i> FORO</a>
                 </li>
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link" href="{{ route('info') }}"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
+                    <a class="nav-link" href="{{ route('info') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Obtén más información"><i class="bi bi-info-circle"></i> Sobre nosotros</a>
                 </li>
                 @guest
                 @else
                 <li class="nav-item ml-2 mr-2">
-                    <a class="nav-link btnsmall text-center" href="{{ route('posts.create') }}"><i class="bi bi-plus-square-dotted"> POST</i></a>
+                    <a class="nav-link btnsmall text-center" href="{{ route('posts.create') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Crea tu post"><i class="bi bi-plus-square-dotted"> POST</i></a>
                 </li>
                 @endguest
               </ul>
@@ -57,7 +57,7 @@
                         </a>
                         <ul class="dropdown-menu">
                         <li>
-                            <a class="dropdown-item text-primary" href=""><i class="bi bi-gear"></i> Ajustes</a>
+                            <a class="dropdown-item text-primary" href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Gestiona tu usuario"><i class="bi bi-gear"></i> Ajustes</a>
                         </li>
                         
                         <li><a class="dropdown-item text-danger" href="{{ route('logout') }}"
